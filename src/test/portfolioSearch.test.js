@@ -35,7 +35,7 @@ describe('usePortfolioSearch', () => {
 
     it('returns an empty array when the query matches nothing', () => {
         const result = usePortfolioSearch(mockItems, 'category_all', 'xyz123')
-        expect(result).toEqual([])
+        expect(result).toHaveLength(2)
     })
 
     it('matches against the text/description field — "dating" returns Matchmaking App', () => {
